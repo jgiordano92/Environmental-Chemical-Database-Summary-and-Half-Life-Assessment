@@ -1,11 +1,11 @@
-Package: Environmental Chemical Database Summary and Half-Life Assessment
+Package: EnvChemAnalysis
 Type: Package
-Title: ******TBD******
-Version: 1.0
+Title: Environmental Chemical Database Summary and Half-Life Assessment
+Version: 0.1.0
 Date: 23-November-2026
 Author: Jack Giordano
 Maintainer: <giordanoj1@usf.edu>
 Description: An environmental chemical company uses standardized databases for each of their chemicals. This tool will read the company's database, summarize the information by X, Y, and Z. Where multiple timepoints are available for the same study trial, this tool will model the half-life (based on CAKE guidance?). This tool will offer some sort of visualization.
-License: MIT
-Imports: **************TBD********
-***Roxygen???***
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
