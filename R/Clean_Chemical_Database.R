@@ -1,11 +1,12 @@
 #' Clean Chemical Data
 #'
-#' Removes control treatments and selects the variables needed for
-#' residue data analysis from a chemical residue database.
+#' Removes control treatments
+#' Combines Trial ID and Treatment number into new column (unique trial ID)
+#' Filters out columns with information not needed for our assessment
 #'
 #' @param data A dataframe containing chemical residue study data.
 #'
-#' @return A dataframe containing the selected variables for analysis, excluding control samples.
+#' @return A dataframe containing the selected variables for analysis, excluding control samples and organizing data in a useful way.
 #'
 #' @examples
 #' cleaned_data <- Clean_Chemical_Data(test_data)
@@ -15,8 +16,14 @@
 
 Clean_Chemical_Data <- function(data) {
   
-  data %>%
+  data_subset <- data %>%
     dplyr::filter(Form..Type != "Control") %>%
+    
+    # Combine Trial ID and Trt Num
+    dplyr::mutate(
+      Trial.Trt.ID = paste(Trial.ID, Trt.Num, sep = ".")
+    ) %>%
+    
     dplyr::select(
       TSite.Country,
       Reg..Region,
@@ -24,8 +31,7 @@ Clean_Chemical_Data <- function(data) {
       Trial.Type,
       Analyte,
       LOQ,
-      Study.ID,
-      Trial.ID,
+      Trial.Trt.ID,
       Crop,
       Method,
       Spray.Vol.,
@@ -37,6 +43,5 @@ Clean_Chemical_Data <- function(data) {
       Rpt.Conc.SE,
       DAT..d,
       Growth.Stage.at.Trt.s.,
-      Trt.Num
     )
 }

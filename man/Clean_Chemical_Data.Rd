@@ -10,11 +10,12 @@ Clean_Chemical_Data(data)
 \item{data}{A dataframe containing chemical residue study data.}
 }
 \value{
-A dataframe containing the selected variables for analysis, excluding control samples.
+A dataframe containing the selected variables for analysis, excluding control samples and organizing data in a useful way.
 }
 \description{
-Removes control treatments and selects the variables needed for
-residue data analysis from a chemical residue database.
+Removes control treatments
+Combines Trial ID and Treatment number into new column (unique trial ID)
+Filters out columns with information not needed for our assessment
 }
 \examples{
 cleaned_data <- Clean_Chemical_Data(test_data)
