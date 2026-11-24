@@ -10,6 +10,7 @@
 #' Identifies numeric residue concentrations and "censored" residue concentrations (i.e, non-detectable ND or below the limit of quantification <xxx)
 #' Changes censored residue concentrations to numeric upper end (i.e., at the limit of detection for reported as ND and at the limit of quantitation for <xxx)
 #' For uncensored residue concentrations, converts Derivative A and Derivative B into parent chemical equivalent molar concentrations. In these cases, it changes description of analyte from Derivative A/B to Derivative A/B (parent equivalents)
+#' Adds normalized residue concentration to a seasonal application rate of 2.0 kg ai/ha (for uncensored residue values)
 #' Filters out columns with information not needed for our assessment
 #'
 #' @param data A dataframe containing chemical residue study data.
@@ -134,6 +135,15 @@ Clean_Chemical_Data <- function(data) {
       )
     ) %>%
     
+    # Calculate residue normalized to 2.0 kg ai/ha
+    dplyr::mutate(
+      Normalized.Residue = dplyr::case_when(
+        Censored == FALSE ~
+          round((2.0 / Seasonal.Appl..Rate) * Rpt.Conc.SE,2),
+        TRUE ~ Rpt.Conc.SE
+      )
+    ) %>%
+    
     dplyr::select(
       TSite.Continent,
       Form..Type,
@@ -151,6 +161,7 @@ Clean_Chemical_Data <- function(data) {
       Censored,
       DAT..d,
       Growth.Stage.at.Trt.s.,
-      LOD
+      LOD,
+      Normalized.Residue
     )
 }
