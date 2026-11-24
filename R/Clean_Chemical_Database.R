@@ -3,6 +3,7 @@
 #' Removes control treatments and trials where the necessary application information is missing
 #' Converts countries to continents
 #' Gives all application rate units in kg ai/ha, including unit conversion where necessary
+#' Gives seasonal application rate by multiplying application rate by number of applications
 #' Combines Trial ID and Treatment number into new column (unique trial ID)
 #' Filters out columns with information not needed for our assessment
 #'
@@ -54,7 +55,17 @@ Clean_Chemical_Data <- function(data) {
         Appl..Rate.UOM == "g ai/ha" ~ "Kg ai/ha",
         Appl..Rate.UOM == "lb ai/acre" ~ "Kg ai/ha",
         TRUE ~ Appl..Rate.UOM
+      ),
+      
+      Seasonal.Appl..Rate = dplyr::case_when(
+        No..of.Trt.s. == 2 ~ Appl..Rate * 2,
+        TRUE ~ Appl..Rate
       )
+    ) %>%
+    
+    # Combine Crop and Commodity
+    dplyr::mutate(
+      Crop.Fraction = paste(Crop, Commodity, sep = " ")
     ) %>%
     
     # Combine Trial ID and Trt Num
@@ -69,12 +80,12 @@ Clean_Chemical_Data <- function(data) {
       Analyte,
       LOQ,
       Trial.Trt.ID,
-      Crop,
+      Crop.Fraction,
       Method,
       Appl..Rate,
       Appl..Rate.UOM,
       No..of.Trt.s.,
-      Commodity,
+      Seasonal.Appl..Rate,
       Rpt.Conc.SE,
       DAT..d,
       Growth.Stage.at.Trt.s.,
