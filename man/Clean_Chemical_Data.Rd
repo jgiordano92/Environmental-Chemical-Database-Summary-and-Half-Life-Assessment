@@ -13,11 +13,15 @@ Clean_Chemical_Data(data)
 A dataframe containing the selected variables for analysis, excluding control samples and organizing data in a useful way.
 }
 \description{
-Removes control treatments and trials where the necessary application information is missing
+Removes control treatments and trials where the necessary application or residue concentration information is missing
 Converts countries to continents
 Gives all application rate units in kg ai/ha, including unit conversion where necessary
 Gives seasonal application rate by multiplying application rate by number of applications
+Combined crop and commodity into new column
 Combines Trial ID and Treatment number into new column (unique trial ID)
+Identifies numeric residue concentrations and "censored" residue concentrations (i.e, non-detectable ND or below the limit of quantification <xxx)
+Changes censored residue concentrations to numeric upper end (i.e., at the limit of detection for reported as ND and at the limit of quantitation for <xxx)
+For uncensored residue concentrations, converts Derivative A and Derivative B into parent chemical equivalent molar concentrations. In these cases, it changes description of analyte from Derivative A/B to Derivative A/B (parent equivalents)
 Filters out columns with information not needed for our assessment
 }
 \examples{
