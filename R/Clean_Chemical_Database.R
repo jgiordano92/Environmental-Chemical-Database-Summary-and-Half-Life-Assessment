@@ -1,6 +1,6 @@
 #' Clean Chemical Data
 #'
-#' Removes control treatments
+#' Removes control treatments and trials where the necessary application information is missing
 #' Combines Trial ID and Treatment number into new column (unique trial ID)
 #' Filters out columns with information not needed for our assessment
 #'
@@ -17,7 +17,10 @@
 Clean_Chemical_Data <- function(data) {
   
   data_subset <- data %>%
-    dplyr::filter(Form..Type != "Control") %>%
+    dplyr::filter(
+      Form..Type != "Control",
+      Appl..Rate != ""
+    ) %>%
     
     # Combine Trial ID and Trt Num
     dplyr::mutate(
@@ -26,7 +29,6 @@ Clean_Chemical_Data <- function(data) {
     
     dplyr::select(
       TSite.Country,
-      Reg..Region,
       Form..Type,
       Trial.Type,
       Analyte,

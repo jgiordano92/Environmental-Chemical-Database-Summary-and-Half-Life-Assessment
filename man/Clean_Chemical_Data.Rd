@@ -13,7 +13,7 @@ Clean_Chemical_Data(data)
 A dataframe containing the selected variables for analysis, excluding control samples and organizing data in a useful way.
 }
 \description{
-Removes control treatments
+Removes control treatments and trials where the necessary application information is missing
 Combines Trial ID and Treatment number into new column (unique trial ID)
 Filters out columns with information not needed for our assessment
 }
