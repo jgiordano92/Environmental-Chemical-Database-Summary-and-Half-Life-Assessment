@@ -34,8 +34,6 @@ Clean_Chemical_Data <- function(data) {
       Trial.Trt.ID,
       Crop,
       Method,
-      Spray.Vol.,
-      Spray.Vol..UOM,
       Appl..Rate,
       Appl..Rate.UOM,
       No..of.Trt.s.,
