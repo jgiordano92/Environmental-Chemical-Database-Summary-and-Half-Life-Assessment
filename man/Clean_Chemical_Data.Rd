@@ -19,6 +19,7 @@ Gives all application rate units in kg ai/ha, including unit conversion where ne
 Gives seasonal application rate by multiplying application rate by number of applications
 Combined crop and commodity into new column
 Combines Trial ID and Treatment number into new column (unique trial ID)
+Simplify application method into "Foliar" or "Soil"
 Identifies numeric residue concentrations and "censored" residue concentrations (i.e, non-detectable ND or below the limit of quantification <xxx)
 Changes censored residue concentrations to numeric upper end (i.e., at the limit of detection for reported as ND and at the limit of quantitation for <xxx)
 For uncensored residue concentrations, converts Derivative A and Derivative B into parent chemical equivalent molar concentrations. In these cases, it changes description of analyte from Derivative A/B to Derivative A/B (parent equivalents)
