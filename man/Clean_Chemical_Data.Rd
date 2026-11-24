@@ -14,6 +14,8 @@ A dataframe containing the selected variables for analysis, excluding control sa
 }
 \description{
 Removes control treatments and trials where the necessary application information is missing
+Converts countries to continents
+Gives all application rate units in kg ai/ha, including unit conversion where necessary
 Combines Trial ID and Treatment number into new column (unique trial ID)
 Filters out columns with information not needed for our assessment
 }

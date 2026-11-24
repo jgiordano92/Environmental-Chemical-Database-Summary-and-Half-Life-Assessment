@@ -1,6 +1,7 @@
 #' Clean Chemical Data
 #'
 #' Removes control treatments and trials where the necessary application information is missing
+#' Converts countries to continents
 #' Gives all application rate units in kg ai/ha, including unit conversion where necessary
 #' Combines Trial ID and Treatment number into new column (unique trial ID)
 #' Filters out columns with information not needed for our assessment
@@ -21,6 +22,24 @@ Clean_Chemical_Data <- function(data) {
     dplyr::filter(
       Form..Type != "Control",
       Appl..Rate != ""
+    ) %>%
+    
+    #Convert country to Continent
+    dplyr::mutate(
+      TSite.Country = dplyr::case_when(
+        TSite.Country %in% c("Brazil", "Argentina") ~ "South America",
+        TSite.Country == "United States" ~ "North America",
+        TSite.Country == "South Africa" ~ "Africa",
+        TSite.Country %in% c(
+          "Belgium",
+          "France",
+          "Germany",
+          "Greece",
+          "Italy",
+          "Spain"
+        ) ~ "Europe",
+        TRUE ~ TSite.Country
+      )
     ) %>%
     
     #Convert all units of application rate to kg ai/ha
