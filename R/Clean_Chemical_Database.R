@@ -144,10 +144,14 @@ Clean_Chemical_Data <- function(data) {
       )
     ) %>%
     
+    # Convert DAT to numeric
+      dplyr::mutate(
+        DAT..d = suppressWarnings(as.numeric(DAT..d))
+      ) %>%
+    
     dplyr::select(
       TSite.Continent,
       Form..Type,
-      Trial.Type,
       Analyte,
       Trial.Trt.ID,
       Crop.Fraction,
@@ -160,7 +164,6 @@ Clean_Chemical_Data <- function(data) {
       Rpt.Conc.SE.Original,
       Censored,
       DAT..d,
-      Growth.Stage.at.Trt.s.,
       LOD,
       Normalized.Residue
     )

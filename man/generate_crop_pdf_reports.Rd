@@ -2,23 +2,25 @@
 % Please edit documentation in R/Crop_Residue_Visualization.R
 \name{generate_crop_pdf_reports}
 \alias{generate_crop_pdf_reports}
-\title{Generate Crop Diagnostic PDF Reports}
+\title{Visualize Residue Results per standardized crop per each of the three analytes}
 \usage{
-generate_crop_pdf_reports(data, output_dir = "Crop_PDF_Reports", min_n = 4)
+generate_crop_pdf_reports(
+  data,
+  output_dir = "Chemical X Visualizations",
+  min_n = 5
+)
 }
 \arguments{
-\item{data}{Standardized residue dataset.}
+\item{data}{standardized residue dataset.}
 
-\item{output_dir}{Directory where PDF reports are saved.}
+\item{output_dir}{directory where visualizations.}
 
-\item{min_n}{Minimum observations required for a crop-analyte
+\item{min_n}{minimum observations required for a crop-analyte
 combination to be plotted.}
 }
 \value{
-PDF files saved to output_dir.
+various graphs
 }
 \description{
-Generates one PDF report per Crop.Standard. Each PDF contains
-one page per analyte and six diagnostic plots arranged in a
-3 x 2 layout.
+Visualize Residue Results per standardized crop per each of the three analytes
 }
