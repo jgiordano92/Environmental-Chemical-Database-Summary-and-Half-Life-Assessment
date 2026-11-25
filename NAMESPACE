@@ -2,8 +2,16 @@
 
 export(Clean_Chemical_Data)
 export(generate_crop_pdf_reports)
+export(generate_trial_dat_plots)
 export(import_chemical_data)
 export(standardize_crop_names)
 export(summarize_normalized_residue)
 import(ggplot2)
 import(patchwork)
+importFrom(dplyr,
+  filter,
+  group_by,
+  n_distinct,
+  pull,
+  summarise
+)
