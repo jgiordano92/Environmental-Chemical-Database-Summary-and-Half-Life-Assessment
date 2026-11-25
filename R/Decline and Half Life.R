@@ -11,9 +11,9 @@
 #' @importFrom dplyr filter group_by summarise n_distinct pull
 #'
 #' @export
-generate_trial_dat_plots <- function(
+generate_decline_plots <- function(
     data,
-    output_dir = "Trial DAT Visualizations"
+    output_dir = "Decline Curves"
 ) {
   
   if (!dir.exists(output_dir)) {
@@ -27,14 +27,20 @@ generate_trial_dat_plots <- function(
     crop_data <- data %>%
       dplyr::filter(Crop.Standard == crop)
     
-    # Identify trials with multiple distinct DAT values
+    # Identify trials meeting all criteria
     qualifying_trials <- crop_data %>%
       dplyr::group_by(Trial.Trt.ID) %>%
       dplyr::summarise(
         n_DAT = dplyr::n_distinct(DAT..d, na.rm = TRUE),
+        all_censored = all(Censored, na.rm = FALSE),
+        has_early_DAT = any(DAT..d <= 5, na.rm = TRUE),
         .groups = "drop"
       ) %>%
-      dplyr::filter(n_DAT > 1) %>%
+      dplyr::filter(
+        n_DAT > 1,
+        !all_censored,
+        has_early_DAT
+      ) %>%
       dplyr::pull(Trial.Trt.ID)
     
     if (length(qualifying_trials) == 0) {
@@ -45,34 +51,55 @@ generate_trial_dat_plots <- function(
     
     for (trial in qualifying_trials) {
       
-      df <- crop_data %>%
+      trial_data <- crop_data %>%
         dplyr::filter(Trial.Trt.ID == trial)
       
-      p <- ggplot2::ggplot(
-        df,
-        ggplot2::aes(
-          x = DAT..d,
-          y = Rpt.Conc.SE
-        )
-      ) +
-        ggplot2::geom_point(alpha = 0.7) +
-        ggplot2::scale_x_continuous(
-          limits = c(0, NA)
-        ) +
-        ggplot2::scale_y_continuous(
-          limits = c(0, NA)
-        ) +
-        ggplot2::labs(
-          title = paste0("Trial: ", trial),
-          x = "Days After Treatment (DAT)",
-          y = "Residue, Parent Equivalent (mg/kg)"
-        ) +
-        ggplot2::theme_bw()
+      analytes <- sort(unique(trial_data$Analyte))
+      analytes <- analytes[!is.na(analytes)]
       
-      plots[[length(plots) + 1]] <- p
+      for (analyte in analytes) {
+        
+        df <- trial_data %>%
+          dplyr::filter(Analyte == analyte)
+        
+        # Skip analytes with no variation in DAT
+        if (dplyr::n_distinct(df$DAT..d, na.rm = TRUE) <= 1) {
+          next
+        }
+        
+        p <- ggplot2::ggplot(
+          df,
+          ggplot2::aes(
+            x = DAT..d,
+            y = Rpt.Conc.SE
+          )
+        ) +
+          ggplot2::geom_point(alpha = 0.7) +
+          ggplot2::scale_x_continuous(
+            limits = c(0, NA)
+          ) +
+          ggplot2::scale_y_continuous(
+            limits = c(0, NA)
+          ) +
+          ggplot2::labs(
+            title = paste0(
+              "Trial: ", trial,
+              " | ", analyte
+            ),
+            x = "Days After Treatment (DAT)",
+            y = "Residue Concentration (mg/kg)"
+          ) +
+          ggplot2::theme_bw()
+        
+        plots[[length(plots) + 1]] <- p
+      }
     }
     
-    # Split plots into groups of six (one PDF page per group)
+    if (length(plots) == 0) {
+      next
+    }
+    
+    # Split plots into groups of six
     plot_groups <- split(
       plots,
       ceiling(seq_along(plots) / 6)
@@ -94,7 +121,6 @@ generate_trial_dat_plots <- function(
     
     for (plot_group in plot_groups) {
       
-      # Arrange four plots on top and two on bottom
       combined_plot <- patchwork::wrap_plots(
         plot_group,
         ncol = 4,
@@ -110,6 +136,7 @@ generate_trial_dat_plots <- function(
     grDevices::dev.off()
     
     message("Created PDF: ", crop)
+    
   }
   
   message(

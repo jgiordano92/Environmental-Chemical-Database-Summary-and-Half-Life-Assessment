@@ -2,7 +2,7 @@
 
 export(Clean_Chemical_Data)
 export(generate_crop_pdf_reports)
-export(generate_trial_dat_plots)
+export(generate_decline_plots)
 export(import_chemical_data)
 export(standardize_crop_names)
 export(summarize_normalized_residue)
