@@ -25,16 +25,6 @@ Grain, Seed, Silage).
 Standardization is performed using keyword matching with
 \code{grepl()} and \code{dplyr::case_when()}.
 
-Examples:
-\itemize{
-  \item "Millet forage" -> "Millet Forage"
-  \item "Cottonseed" -> "Cotton Seed"
-  \item "Cotton Seed, Undelinted" -> "Cotton Seed"
-  \item "Soya bean seed" -> "Soybean Seed"
-  \item "Maize forage" -> "Field Corn Forage"
-  \item "Field corn forage" -> "Field Corn Forage"
-}
-
 
 Crop names are standardized using rule-based pattern matching.
 New standardization rules can be added by including additional

@@ -1,35 +1,16 @@
 #' Standardize Crop Names
 #'
-#' Standardizes crop names by identifying key crop and commodity terms
-#' within the \code{Crop.Fraction} column and assigning a consistent
-#' crop description. This approach is intended to resolve spelling
-#' differences, formatting differences, and alternative naming conventions
-#' while preserving meaningful commodity information (e.g., Forage,
-#' Grain, Seed, Silage).
+#' Standardizes crop names, combining crops with synonymous names in database and resolve spelling
+#' differences and formatting differences
+#' 
+#' @param data A data frame containing a Crop.Fraction column.
 #'
-#' Standardization is performed using keyword matching with
-#' \code{grepl()} and \code{dplyr::case_when()}.
-#'
-#' Examples:
-#' \itemize{
-#'   \item "Millet forage" -> "Millet Forage"
-#'   \item "Cottonseed" -> "Cotton Seed"
-#'   \item "Cotton Seed, Undelinted" -> "Cotton Seed"
-#'   \item "Soya bean seed" -> "Soybean Seed"
-#'   \item "Maize forage" -> "Field Corn Forage"
-#'   \item "Field corn forage" -> "Field Corn Forage"
-#' }
-#'
-#' @param data A data frame containing a \code{Crop.Fraction} column.
-#'
-#' @return A data frame with an added \code{Crop.Standard} column
-#' containing standardized crop names.
+#' @return A data frame with an added Crop.Standard column
+#' with the standardized crop names.
 #'
 #' @details
-#' Crop names are standardized using rule-based pattern matching.
 #' New standardization rules can be added by including additional
-#' \code{grepl()} conditions within the corresponding
-#' \code{dplyr::case_when()} statement.
+#' grepl() conditions within dplyr::case_when()
 #'
 #' @export
 
@@ -74,6 +55,67 @@ standardize_crop_names <- function(data) {
         grepl("cotton", Crop.Fraction, ignore.case = TRUE) &
           grepl("trash", Crop.Fraction, ignore.case = TRUE) ~
           "Cotton Gin Trash",
+        
+        
+        grepl("dried|dry", Crop.Fraction, ignore.case = TRUE) &
+          grepl("beans", Crop.Fraction, ignore.case = TRUE) ~
+          "Dry Bean Seed",
+        
+        grepl("field corn|maize", Crop.Fraction, ignore.case = TRUE) &
+          grepl("fodder|stover", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Stover",
+        
+        grepl("field corn|maize", Crop.Fraction, ignore.case = TRUE) &
+          grepl("foliage|forage|upper plant|whole plant|stalks", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Forage",
+        
+        grepl("field corn|maize", Crop.Fraction, ignore.case = TRUE) &
+          grepl("silage", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Silage",
+        
+        grepl("field corn distillate", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Distillate",
+        
+        grepl("field corn germ", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Germ",
+        
+        grepl("field corn|maize", Crop.Fraction, ignore.case = TRUE) &
+          grepl("grain", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Grain",
+        
+        grepl("field corn grits", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Grits",
+        
+        grepl("field corn hulls", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Hulls",
+        
+        grepl("field corn meal", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Meal",
+        
+        grepl("field corn oil", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Oil",
+        
+        grepl("field corn press cake", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Press Cake",
+        
+        grepl("field corn screenings", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Screenings",
+        
+        grepl("field corn soapstock", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Soapstock",
+        
+        grepl("field corn|maize", Crop.Fraction, ignore.case = TRUE) &
+          grepl("cob|ear", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Cob",
+        
+        grepl("maize kernels", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Kernels",
+       
+         grepl("potato tuber", Crop.Fraction, ignore.case = TRUE) ~
+          "Potato Tuber",
+        
+        grepl("grapes", Crop.Fraction, ignore.case = TRUE) ~
+          "Grape",
         
         grepl("soybean|soya bean", Crop.Fraction,
               ignore.case = TRUE) &
