@@ -2,3 +2,4 @@
 
 export(Clean_Chemical_Data)
 export(import_chemical_data)
+export(standardize_crop_names)

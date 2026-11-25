@@ -128,9 +128,9 @@ Clean_Chemical_Data <- function(data) {
     dplyr::mutate(
       Analyte = dplyr::case_when(
         Analyte == "Derivative A" ~
-          "Derivative A (parent equivalents)",
+          "Derivative A (parent equivalent)",
         Analyte == "Derivative B" ~
-          "Derivative B (parent equivalents)",
+          "Derivative B (parent equivalent)",
         TRUE ~ Analyte
       )
     ) %>%
@@ -139,7 +139,7 @@ Clean_Chemical_Data <- function(data) {
     dplyr::mutate(
       Normalized.Residue = dplyr::case_when(
         Censored == FALSE ~
-          round((2.0 / Seasonal.Appl..Rate) * Rpt.Conc.SE,2),
+          round((2.0 / Seasonal.Appl..Rate) * Rpt.Conc.SE,3),
         TRUE ~ Rpt.Conc.SE
       )
     ) %>%

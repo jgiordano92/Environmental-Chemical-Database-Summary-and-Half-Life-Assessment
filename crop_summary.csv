@@ -1,0 +1,223 @@
+"Crop.Fraction","Analyte","Count","Min","Max","Percentile_25","Median","Percentile_75","SD"
+"Browntop millet Forage","Derivative A (parent equivalents)",7,0.018,0.601,0.1925,0.387,0.502,0.230885562253561
+"Browntop millet Forage","Derivative B (parent equivalents)",7,0.01,0.23,0.0315,0.064,0.109,0.0762623916550772
+"Browntop millet Forage","Parent chemical",7,0.01,0.01,0.01,0.01,0.01,0
+"Browntop millet Grain","Derivative A (parent equivalents)",7,0.012,0.096,0.018,0.036,0.045,0.0289531641498078
+"Browntop millet Grain","Derivative B (parent equivalents)",7,0.01,0.054,0.0105,0.026,0.048,0.0199988094883766
+"Browntop millet Grain","Parent chemical",7,0.01,0.01,0.01,0.01,0.01,0
+"Browntop millet Straw","Derivative A (parent equivalents)",7,0.054,1.25,0.1515,0.331,0.607,0.420528126005746
+"Browntop millet Straw","Derivative B (parent equivalents)",7,0.021,0.412,0.034,0.134,0.2395,0.149419352351504
+"Browntop millet Straw","Parent chemical",7,0.01,0.01,0.01,0.01,0.01,0
+"Collard Leaves","Derivative A (parent equivalents)",4,0.186,1.684,0.26325,0.496,0.94825,0.683232756825959
+"Collard Leaves","Derivative B (parent equivalents)",4,0.027,0.139,0.027,0.035,0.067,0.0538640263379311
+"Collard Leaves","Parent chemical",4,0.01,0.01,0.01,0.01,0.01,0
+"Cotton Gin trash (Spindle Picker)","Derivative A (parent equivalents)",7,0.01,0.022,0.01,0.01,0.017,0.00505682000583653
+"Cotton Gin trash (Spindle Picker)","Derivative B (parent equivalents)",7,0.01,0.029,0.01,0.01,0.0155,0.00704069801734378
+"Cotton Gin trash (Spindle Picker)","Parent chemical",7,0.01,0.01,0.01,0.01,0.01,0
+"Cotton Seed","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Cotton Seed, Undelinted","Derivative A (parent equivalents)",8,0.01,0.01,0.01,0.01,0.01,0
+"Cotton Seed, Undelinted","Derivative B (parent equivalents)",8,0.01,0.01,0.01,0.01,0.01,0
+"Cotton Seed, Undelinted","Parent chemical",8,0.01,0.01,0.01,0.01,0.01,0
+"Cotton Seed, Undelinted (Pre-processing)","Derivative A (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Cotton Seed, Undelinted (Pre-processing)","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Cotton Seed, Undelinted (Pre-processing)","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Dried beans Beans, Dried","Parent chemical",9,0.01,0.01,0.01,0.01,0.01,0
+"Dry beans Beans","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Dry beans Beans, Dry","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Dry beans Green Material","Parent chemical",2,0.02,0.02,0.02,0.02,0.02,0
+"Dry beans Pods","Parent chemical",2,0.02,0.02,0.02,0.02,0.02,0
+"Dry peas Seed","Derivative A (parent equivalents)",5,0.02,0.02,0.02,0.02,0.02,0
+"Dry peas Seed","Derivative B (parent equivalents)",5,0.02,0.02,0.02,0.02,0.02,0
+"Dry peas Seed","Parent chemical",5,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Coarse gluten-starch","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Coarse meal","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Distillate, Deodorized","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Distillate, Deodorized (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Ear, K+CWHR","Parent chemical",16,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Flour","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Fodder","Derivative A (parent equivalents)",27,0.01,0.417,0.012,0.029,0.071,0.0838398113077192
+"Field corn Fodder","Derivative B (parent equivalents)",27,0.01,0.286,0.01,0.01,0.025,0.0543976599965974
+"Field corn Fodder","Parent chemical",93,0.006,0.01,0.01,0.01,0.01,0.000583391768929104
+"Field corn Forage","Derivative A (parent equivalents)",23,0.01,0.345,0.021,0.029,0.0655,0.0750277155640954
+"Field corn Forage","Derivative B (parent equivalents)",23,0.01,0.117,0.01,0.01,0.013,0.0268440820868027
+"Field corn Forage","Parent chemical",91,0.01,0.012,0.01,0.01,0.01,0.000209656967344384
+"Field corn Germ","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Germ (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Gluten","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Grain","Derivative A (parent equivalents)",28,0.01,0.015,0.01,0.01,0.01,0.00100461896222362
+"Field corn Grain","Derivative B (parent equivalents)",28,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Grain","Parent chemical",78,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Grain (Dry Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Grain (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Grits, large","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Grits, medium","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Grits, small","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Hulls","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Hulls (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Meal","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Field corn Meal (Dry Milling)","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Field corn Oil, crude expelled (Dry Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, crude expelled (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, crude solvent-extracted (Dry Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, crude solvent-extracted (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, refined (Dry Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, refined (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, refined bleached","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, refined bleached (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, refined bleached deodorized","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Oil, refined bleached deodorized (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Press Cake, Expeller","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Press Cake, Expeller (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Press Cake, Extracted","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Press Cake, Extracted (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Process Water","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Screenings (Dry Milling)","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Field corn Screenings (Wet Milling)","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Field corn Silage","Derivative A (parent equivalents)",14,0.01,0.186,0.015,0.029,0.057,0.0469692440870607
+"Field corn Silage","Derivative B (parent equivalents)",14,0.01,0.089,0.01,0.01,0.022,0.0216333076527839
+"Field corn Silage","Parent chemical",14,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Soapstock (Dry Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Soapstock (Wet Milling)","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Stalks","Derivative A (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Field corn Stalks","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Field corn Stalks","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Field corn Starch","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Steepwater Concentrate","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Field corn Steepwater Distillate","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Head lettuce Head","Derivative A (parent equivalents)",3,0.024,0.03,0.027,0.03,0.03,0.00346410161513775
+"Head lettuce Head","Derivative B (parent equivalents)",3,0.01,0.01,0.01,0.01,0.01,0
+"Head lettuce Head","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Maize Cob (no kernels)","Derivative A (parent equivalents)",20,0.02,0.02,0.02,0.02,0.02,0
+"Maize Cob (no kernels)","Derivative B (parent equivalents)",20,0.02,0.02,0.02,0.02,0.02,0
+"Maize Cob (no kernels)","Parent chemical",20,0.01,0.01,0.01,0.01,0.01,0
+"Maize Cob, whole","Derivative A (parent equivalents)",12,0.02,0.02,0.02,0.02,0.02,0
+"Maize Cob, whole","Derivative B (parent equivalents)",12,0.02,0.02,0.02,0.02,0.02,0
+"Maize Cob, whole","Parent chemical",20,0.01,0.01,0.01,0.01,0.01,0
+"Maize Fodder","Derivative A (parent equivalents)",6,0.02,1.08,0.065,0.16,0.24,0.399733244385136
+"Maize Fodder","Derivative B (parent equivalents)",6,0.02,0.071,0.02,0.02,0.02,0.020820662813657
+"Maize Fodder","Parent chemical",7,0.01,0.01,0.01,0.01,0.01,0
+"Maize Forage","Derivative A (parent equivalents)",14,0.02,0.02,0.02,0.02,0.02,0
+"Maize Forage","Derivative B (parent equivalents)",14,0.02,0.02,0.02,0.02,0.02,0
+"Maize Forage","Parent chemical",36,0.003,0.05,0.005,0.0075,0.01,0.0102713965604287
+"Maize Grain","Derivative A (parent equivalents)",20,0.01,0.021,0.01,0.01,0.01,0.00338572856188101
+"Maize Grain","Derivative B (parent equivalents)",20,0.01,0.019,0.01,0.01,0.01,0.00201246117974981
+"Maize Grain","Parent chemical",50,0.003,0.01,0.003,0.01,0.01,0.00348998567332303
+"Maize Kernels","Derivative A (parent equivalents)",20,0.02,0.02,0.02,0.02,0.02,0
+"Maize Kernels","Derivative B (parent equivalents)",20,0.02,0.02,0.02,0.02,0.02,0
+"Maize Kernels","Parent chemical",20,0.01,0.01,0.01,0.01,0.01,0
+"Maize Silage","Derivative A (parent equivalents)",10,0.02,0.28,0.02,0.03,0.055,0.0820839678486474
+"Maize Silage","Derivative B (parent equivalents)",10,0.02,0.02,0.02,0.02,0.02,0
+"Maize Silage","Parent chemical",10,0.01,0.01,0.01,0.01,0.01,0
+"Maize Straw","Parent chemical",3,0.003,0.01,0.0065,0.01,0.01,0.00404145188432738
+"Maize Upper plant","Derivative A (parent equivalents)",4,0.031,0.083,0.03925,0.0575,0.0755,0.0247167284782324
+"Maize Upper plant","Derivative B (parent equivalents)",4,0.009,0.037,0.00975,0.0145,0.0235,0.0129711217710728
+"Maize Upper plant","Parent chemical",4,0.01,0.01,0.01,0.01,0.01,0
+"Maize Whole plant","Derivative A (parent equivalents)",8,0.01,0.125,0.01,0.0235,0.055,0.0436896522564064
+"Maize Whole plant","Derivative B (parent equivalents)",8,0.01,0.056,0.01,0.01,0.02025,0.0160262062171397
+"Maize Whole plant","Parent chemical",48,0.003,182,0.01,0.05,0.56725,42.9003577071623
+"Mustard Leaves","Derivative A (parent equivalents)",4,0.024,0.851,0.042,0.051,0.25325,0.404707610504176
+"Mustard Leaves","Derivative B (parent equivalents)",4,0.01,0.026,0.01,0.01,0.014,0.008
+"Mustard Leaves","Parent chemical",4,0.01,0.01,0.01,0.01,0.01,0
+"Oats Forage","Parent chemical",8,0.005,0.005,0.005,0.005,0.005,0
+"Oats Grain","Parent chemical",4,0.005,0.005,0.005,0.005,0.005,0
+"Oats Straw","Parent chemical",4,0.005,0.005,0.005,0.005,0.005,0
+"Oranges Whole fruit","Parent chemical",6,0.002,0.002,0.002,0.002,0.002,0
+"Peanut Nut, Whole","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Pearl millet Forage","Derivative A (parent equivalents)",1,0.042,0.042,0.042,0.042,0.042,NA
+"Pearl millet Forage","Derivative B (parent equivalents)",1,0.021,0.021,0.021,0.021,0.021,NA
+"Pearl millet Forage","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Pearl millet Grain","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Pearl millet Straw","Derivative A (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Pearl millet Straw","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Pearl millet Straw","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Potato Tuber","Derivative A (parent equivalents)",2,0.01,0.01,0.01,0.01,0.01,0
+"Potato Tuber","Derivative B (parent equivalents)",2,0.01,0.01,0.01,0.01,0.01,0
+"Potato Tuber","Parent chemical",15,0.01,0.01,0.01,0.01,0.01,0
+"Potato Tuber (Pre-processing)","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Radish Root","Derivative A (parent equivalents)",4,0.012,0.325,0.012,0.027,0.11275,0.152158634326153
+"Radish Root","Derivative B (parent equivalents)",4,0.01,0.027,0.01,0.01,0.01425,0.0085
+"Radish Root","Parent chemical",4,0.009,0.01,0.00975,0.01,0.01,5e-04
+"Radish Top","Derivative A (parent equivalents)",4,0.06,1.563,0.1185,0.15,0.51225,0.722812735084268
+"Radish Top","Derivative B (parent equivalents)",4,0.01,0.375,0.01,0.021,0.11775,0.179133795434214
+"Radish Top","Parent chemical",4,0.01,0.01,0.01,0.01,0.01,0
+"Red table grapes Bunch","Parent chemical",1,0.002,0.002,0.002,0.002,0.002,NA
+"Sorghum Plant Material","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Sorghum Seed","Parent chemical",2,0.01,0.01,0.01,0.01,0.01,0
+"Soya bean Seed","Derivative A (parent equivalents)",4,0.031,0.083,0.03925,0.0575,0.0755,0.0247167284782324
+"Soya bean Seed","Derivative B (parent equivalents)",4,0.028,0.074,0.049,0.0605,0.06725,0.0199060292373944
+"Soya bean Seed","Parent chemical",4,0.005,0.021,0.00875,0.01,0.01275,0.00675771164423777
+"Soybean Seed","Derivative A (parent equivalents)",8,0.01,0.048,0.01,0.017,0.027,0.0144122963373047
+"Soybean Seed","Derivative B (parent equivalents)",8,0.01,0.043,0.01,0.01,0.01675,0.0139795769402572
+"Soybean Seed","Parent chemical",8,0.01,0.01,0.01,0.01,0.01,0
+"Soybean Straw","Derivative A (parent equivalents)",7,0.018,0.373,0.0715,0.119,0.252,0.136843845660805
+"Soybean Straw","Derivative B (parent equivalents)",7,0.011,0.31,0.0605,0.106,0.168,0.101261566064844
+"Soybean Straw","Parent chemical",7,0.01,0.01,0.01,0.01,0.01,0
+"Spring oats Forage","Derivative A (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Spring oats Forage","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Spring oats Forage","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Spring oats Grain","Derivative A (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Spring oats Grain","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Spring oats Grain","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Spring oats Straw","Derivative A (parent equivalents)",1,0.024,0.024,0.024,0.024,0.024,NA
+"Spring oats Straw","Derivative B (parent equivalents)",1,0.011,0.011,0.011,0.011,0.011,NA
+"Spring oats Straw","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Sugar beet Root","Derivative A (parent equivalents)",3,0.01,0.01,0.01,0.01,0.01,0
+"Sugar beet Root","Derivative B (parent equivalents)",3,0.01,0.01,0.01,0.01,0.01,0
+"Sugar beet Root","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Sugar beet Top","Derivative A (parent equivalents)",3,0.012,0.024,0.018,0.024,0.024,0.00692820323027551
+"Sugar beet Top","Derivative B (parent equivalents)",3,0.01,0.01,0.01,0.01,0.01,0
+"Sugar beet Top","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Sugar beets Root","Parent chemical",13,0.01,0.01,0.01,0.01,0.01,0
+"Sugar beets Top","Parent chemical",12,0.01,0.01,0.01,0.01,0.01,0
+"Sunflower Meal","Derivative A (parent equivalents)",1,0.012,0.012,0.012,0.012,0.012,NA
+"Sunflower Meal","Derivative B (parent equivalents)",1,0.038,0.038,0.038,0.038,0.038,NA
+"Sunflower Meal","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Sunflower Oil, refined","Derivative A (parent equivalents)",1,0.02,0.02,0.02,0.02,0.02,NA
+"Sunflower Oil, refined","Derivative B (parent equivalents)",1,0.02,0.02,0.02,0.02,0.02,NA
+"Sunflower Oil, refined","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Sunflower Seed","Derivative A (parent equivalents)",12,0.02,0.042,0.02,0.02,0.0235,0.00867947771086102
+"Sunflower Seed","Derivative B (parent equivalents)",12,0.019,0.037,0.01975,0.02,0.02,0.00500605693741152
+"Sunflower Seed","Parent chemical",12,0.01,0.01,0.01,0.01,0.01,0
+"Sunflower Seed (RAC)","Derivative A (parent equivalents)",1,0.007,0.007,0.007,0.007,0.007,NA
+"Sunflower Seed (RAC)","Derivative B (parent equivalents)",1,0.036,0.036,0.036,0.036,0.036,NA
+"Sunflower Seed (RAC)","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Sunflower Seed (processing)","Derivative A (parent equivalents)",1,0.007,0.007,0.007,0.007,0.007,NA
+"Sunflower Seed (processing)","Derivative B (parent equivalents)",1,0.028,0.028,0.028,0.028,0.028,NA
+"Sunflower Seed (processing)","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Sweet Maize Cob (no kernels)","Derivative A (parent equivalents)",3,0.02,0.02,0.02,0.02,0.02,0
+"Sweet Maize Cob (no kernels)","Derivative B (parent equivalents)",3,0.02,0.02,0.02,0.02,0.02,0
+"Sweet Maize Cob (no kernels)","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Sweet Maize Cob, whole","Derivative A (parent equivalents)",3,0.02,0.02,0.02,0.02,0.02,0
+"Sweet Maize Cob, whole","Derivative B (parent equivalents)",3,0.02,0.02,0.02,0.02,0.02,0
+"Sweet Maize Cob, whole","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Sweet Maize Kernels","Derivative A (parent equivalents)",3,0.02,0.02,0.02,0.02,0.02,0
+"Sweet Maize Kernels","Derivative B (parent equivalents)",3,0.02,0.02,0.02,0.02,0.02,0
+"Sweet Maize Kernels","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Sweet corn Ear, K+CWHR","Parent chemical",22,0.01,0.01,0.01,0.01,0.01,0
+"Sweet corn Fodder","Parent chemical",26,0.01,0.012,0.01,0.01,0.01,0.000392232270276368
+"Sweet corn Forage","Parent chemical",34,0.01,0.01,0.01,0.01,0.01,0
+"Sweet corn Kernels","Parent chemical",4,0.01,0.01,0.01,0.01,0.01,0
+"Sweet potato Tuber","Derivative A (parent equivalents)",1,0.036,0.036,0.036,0.036,0.036,NA
+"Sweet potato Tuber","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Sweet potato Tuber","Parent chemical",1,0.01,0.01,0.01,0.01,0.01,NA
+"Sweetcorn Cob (no kernels)","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Sweetcorn Kernels","Parent chemical",3,0.01,0.01,0.01,0.01,0.01,0
+"Turnip Root","Derivative A (parent equivalents)",6,0.01,0.268,0.01,0.011,0.021,0.104164613313095
+"Turnip Root","Derivative B (parent equivalents)",6,0.01,0.011,0.01,0.01,0.01,0.000408248290463863
+"Turnip Root","Parent chemical",6,0.01,0.01,0.01,0.01,0.01,0
+"Turnip Top","Derivative A (parent equivalents)",6,0.012,0.315,0.0255,0.036,0.0555,0.116040941050993
+"Turnip Top","Derivative B (parent equivalents)",6,0.01,0.026,0.01,0.0105,0.011,0.00638748776906852
+"Turnip Top","Parent chemical",6,0.01,0.012,0.01,0.01,0.01,0.000816496580927726
+"White table grapes Bunch","Parent chemical",5,0.002,0.002,0.002,0.002,0.002,0
+"White wine grapes Bunch","Parent chemical",6,0.002,0.002,0.002,0.002,0.002,0
+"Winter barley Grain","Parent chemical",4,0.005,0.005,0.005,0.005,0.005,0
+"Winter barley Straw","Parent chemical",4,0.005,0.005,0.005,0.005,0.005,0
+"Winter wheat Forage","Derivative A (parent equivalents)",1,0.018,0.018,0.018,0.018,0.018,NA
+"Winter wheat Forage","Derivative B (parent equivalents)",1,0.01,0.01,0.01,0.01,0.01,NA
+"Winter wheat Forage","Parent chemical",17,0.005,0.01,0.005,0.005,0.005,0.00121267812518166
+"Winter wheat Grain","Derivative A (parent equivalents)",2,0.01,0.01,0.01,0.01,0.01,0
+"Winter wheat Grain","Derivative B (parent equivalents)",2,0.01,0.01,0.01,0.01,0.01,0
+"Winter wheat Grain","Parent chemical",18,0.005,0.01,0.005,0.005,0.005,0.00161690416690889
+"Winter wheat Straw","Derivative A (parent equivalents)",2,0.018,0.024,0.0195,0.021,0.0225,0.00424264068711929
+"Winter wheat Straw","Derivative B (parent equivalents)",2,0.01,0.016,0.0115,0.013,0.0145,0.00424264068711928
+"Winter wheat Straw","Parent chemical",18,0.005,0.01,0.005,0.005,0.005,0.00161690416690889
