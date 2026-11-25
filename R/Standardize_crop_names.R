@@ -155,7 +155,7 @@ standardize_crop_names <- function(data) {
         
         grepl("sweet corn", Crop.Fraction, ignore.case = TRUE) &
           grepl("(shelled)|(no kernels)", Crop.Fraction, ignore.case = TRUE) ~
-          "Sweet Corn Cob (No Kernels)",
+          "Sweet Corn Cob No Kernels",
         
         grepl("barley", Crop.Fraction, ignore.case = TRUE) &
           grepl("grain", Crop.Fraction, ignore.case = TRUE) ~

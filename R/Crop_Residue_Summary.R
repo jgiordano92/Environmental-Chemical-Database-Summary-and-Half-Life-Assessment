@@ -11,7 +11,6 @@
 #'   75th Percentile (P75)
 #'   Maximum
 #'   Standard Deviation (SD)
-#' }
 #'
 #' Statistics are calculated from the Normalized.Residue column.
 #'

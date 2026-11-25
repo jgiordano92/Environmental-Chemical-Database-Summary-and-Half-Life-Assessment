@@ -28,10 +28,33 @@ generate_crop_pdf_reports <- function(
     crop_data <- data %>%
       dplyr::filter(Crop.Standard == crop)
     
+    analyte_counts <- crop_data %>%
+      dplyr::count(Analyte)
+    
+    if (!any(analyte_counts$n >= 5)) {
+      next
+    }
+    
+    analytes <- sort(unique(crop_data$Analyte))
+    
+    analytes <- analytes[
+      !is.na(analytes)
+    ]
+    
+    analytes <- analytes[
+      vapply(
+        analytes,
+        function(a) {
+          sum(crop_data$Analyte == a, na.rm = TRUE) >= 5
+        },
+        logical(1)
+      )
+    ]
+
     pdf_file <- file.path(
       output_dir,
       paste0(
-        gsub("[^A-Za-z0-9]", "_", crop),
+        crop,
         ".pdf"
       )
     )
@@ -41,8 +64,6 @@ generate_crop_pdf_reports <- function(
       width = 14,
       height = 10
     )
-    
-    analytes <- sort(unique(crop_data$Analyte))
     
     for (analyte in analytes) {
       
@@ -79,9 +100,9 @@ generate_crop_pdf_reports <- function(
         scale_x_continuous(limits = c(0, NA)) +
         scale_y_continuous(limits = c(0, NA)) +
         labs(
-          title = "Appl Rate vs Residue",
-          x = "Application Rate",
-          y = "Reported Concentration"
+          title = "Single Application Rate vs Residue",
+          x = "Application Rate (kg ai/ha)",
+          y = "Residue, Parent Equivalent (mg/kg)"
         ) +
         theme_bw()
       
@@ -96,9 +117,9 @@ generate_crop_pdf_reports <- function(
         scale_x_continuous(limits = c(0, NA)) +
         scale_y_continuous(limits = c(0, NA)) +
         labs(
-          title = "Seasonal Rate vs Residue",
-          x = "Seasonal Application Rate",
-          y = "Reported Concentration"
+          title = "Seasonal Application Rate vs Residue",
+          x = "Seasonal Application Rate (kg ai/ha)",
+          y = "Residue (Paren Equivalent (mg/kg)"
         ) +
         theme_bw()
       
@@ -113,9 +134,9 @@ generate_crop_pdf_reports <- function(
         scale_x_continuous(limits = c(0, NA)) +
         scale_y_continuous(limits = c(0, NA)) +
         labs(
-          title = "DAT vs Normalized Residue",
-          x = "DAT (Days)",
-          y = "Normalized Residue"
+          title = "Harvest Interval (DAT) vs Normalized Residue",
+          x = "DAT",
+          y = "Residue Normalized to 2.0 kg ai/ha, Parent Equivalent (mg/kg)"
         ) +
         theme_bw()
       
@@ -129,9 +150,9 @@ generate_crop_pdf_reports <- function(
         ) +
           geom_boxplot(outlier.alpha = 0.6) +
           labs(
-            title = "Method",
+            title = "Method of Application (Foliar or Soil) vs Normalized Residue",
             x = "Application Method",
-            y = "Normalized Residue"
+            y = "Residue Normalized to 2.0 kg ai/ha, Parent Equivalent (mg/kg)"
           ) +
           theme_bw()
       } else {
@@ -148,9 +169,9 @@ generate_crop_pdf_reports <- function(
         ) +
           geom_boxplot(outlier.alpha = 0.6) +
           labs(
-            title = "Continent",
+            title = "Continent of Data Generation vs Normalized Residue",
             x = "Continent",
-            y = "Normalized Residue"
+            y = "Residue Normalized to 2.0 kg ai/ha, Parent Equivalent (mg/kg)"
           ) +
           theme_bw()
       } else {
@@ -167,9 +188,9 @@ generate_crop_pdf_reports <- function(
         ) +
           geom_boxplot(outlier.alpha = 0.6) +
           labs(
-            title = "Formulation Type",
-            x = "Formulation",
-            y = "Normalized Residue"
+            title = "Formulation Type vs Normalized Residue",
+            x = "Formulation Type",
+            y = "Residue Normalized to 2.0 kg ai/ha, Parent Equivalent (mg/kg)"
           ) +
           theme_bw()
       } else {

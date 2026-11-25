@@ -19,5 +19,18 @@ Calculates summary statistics for normalized residue concentrations
 grouped by Crop.Standard and Analyte.
 }
 \details{
+Summary statistics:
+  Count (N)
+  Minimum
+  25th Percentile (P25)
+  Median
+  75th Percentile (P75)
+  Maximum
+  Standard Deviation (SD)
 
+Statistics are calculated from the Normalized.Residue column.
+
+If the observation corresponding to the minimum, 25th percentile,
+median, 75th percentile, or maximum is censored, an asterisk (*)
+is included in the output.
 }
