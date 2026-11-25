@@ -16,7 +16,7 @@
 
 standardize_crop_names <- function(data) {
   
-  data %>%
+  data <- data %>%
     dplyr::mutate(
       Crop.Standard = dplyr::case_when(
         
@@ -56,13 +56,12 @@ standardize_crop_names <- function(data) {
           grepl("trash", Crop.Fraction, ignore.case = TRUE) ~
           "Cotton Gin Trash",
         
-        
         grepl("dried|dry", Crop.Fraction, ignore.case = TRUE) &
           grepl("beans", Crop.Fraction, ignore.case = TRUE) ~
           "Dry Bean Seed",
         
         grepl("field corn|maize", Crop.Fraction, ignore.case = TRUE) &
-          grepl("fodder|stover", Crop.Fraction, ignore.case = TRUE) ~
+          grepl("fodder|stover|straw", Crop.Fraction, ignore.case = TRUE) ~
           "Field Corn Stover",
         
         grepl("field corn|maize", Crop.Fraction, ignore.case = TRUE) &
@@ -117,15 +116,77 @@ standardize_crop_names <- function(data) {
         grepl("grapes", Crop.Fraction, ignore.case = TRUE) ~
           "Grape",
         
-        grepl("soybean|soya bean", Crop.Fraction,
-              ignore.case = TRUE) &
-          grepl("seed", Crop.Fraction,
-                ignore.case = TRUE) ~
+        grepl("sorghum grain", Crop.Fraction, ignore.case = TRUE) ~
+          "Sorghum Grain",
+        
+        grepl("sorghum", Crop.Fraction, ignore.case = TRUE) &
+          grepl("forage|plant material", Crop.Fraction, ignore.case = TRUE) ~
+          "Field Corn Forage",
+        
+        grepl("soybean|soya bean", Crop.Fraction,ignore.case = TRUE) &
+          grepl("seed|grain", Crop.Fraction, ignore.case = TRUE) ~
           "Soybean Seed",
+        
+        grepl("soybean oil", Crop.Fraction, ignore.case = TRUE) ~
+          "Soybean Oil",
+        
+        grepl("soybean protein", Crop.Fraction, ignore.case = TRUE) ~
+          "Soybean Protein",
+        
+        grepl("oats forage", Crop.Fraction, ignore.case = TRUE) ~
+          "Oats Forage",
+        
+        grepl("oats grain", Crop.Fraction, ignore.case = TRUE) ~
+          "Oats Grain",
+        
+        grepl("oats straw", Crop.Fraction, ignore.case = TRUE) ~
+          "Oats Straw",
+  
+        grepl("beet|beets", Crop.Fraction, ignore.case = TRUE) &
+          grepl("root", Crop.Fraction, ignore.case = TRUE) ~
+          "Sugar Beet Root",
+        
+        grepl("beet|beets", Crop.Fraction, ignore.case = TRUE) &
+          grepl("top", Crop.Fraction, ignore.case = TRUE) ~
+          "Sugar Beet Top",
+        
+        grepl("sunflower seed", Crop.Fraction, ignore.case = TRUE) ~
+          "Sunflower Seed",
+        
+        grepl("sweet corn", Crop.Fraction, ignore.case = TRUE) &
+          grepl("(shelled)|(no kernels)", Crop.Fraction, ignore.case = TRUE) ~
+          "Sweet Corn Cob (No Kernels)",
+        
+        grepl("barley", Crop.Fraction, ignore.case = TRUE) &
+          grepl("grain", Crop.Fraction, ignore.case = TRUE) ~
+          "Barley Grain",
+        
+        grepl("barley", Crop.Fraction, ignore.case = TRUE) &
+          grepl("straw", Crop.Fraction, ignore.case = TRUE) ~
+          "Barley Straw",
+        
+        grepl("wheat", Crop.Fraction, ignore.case = TRUE) &
+          grepl("forage", Crop.Fraction, ignore.case = TRUE) ~
+          "Wheat Forage",
+        
+        grepl("wheat", Crop.Fraction, ignore.case = TRUE) &
+          grepl("grain", Crop.Fraction, ignore.case = TRUE) ~
+          "Wheat Grain",
+        
+        grepl("wheat", Crop.Fraction, ignore.case = TRUE) &
+          grepl("straw", Crop.Fraction, ignore.case = TRUE) ~
+          "Wheat Straw",
         
         TRUE ~ Crop.Fraction
         
       )
     )
+  cat("\nUnique Crop.Fraction values:\n")
+  print(sort(unique(data$Crop.Fraction)))
+  
+  cat("\nUnique Crop.Standard values:\n")
+  print(sort(unique(data$Crop.Standard)))
+  
+  return(data)
   
 }

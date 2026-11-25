@@ -7,27 +7,17 @@
 standardize_crop_names(data)
 }
 \arguments{
-\item{data}{A data frame containing a \code{Crop.Fraction} column.}
+\item{data}{A data frame containing a Crop.Fraction column.}
 }
 \value{
-A data frame with an added \code{Crop.Standard} column
-containing standardized crop names.
+A data frame with an added Crop.Standard column
+with the standardized crop names.
 }
 \description{
-Standardizes crop names by identifying key crop and commodity terms
-within the \code{Crop.Fraction} column and assigning a consistent
-crop description. This approach is intended to resolve spelling
-differences, formatting differences, and alternative naming conventions
-while preserving meaningful commodity information (e.g., Forage,
-Grain, Seed, Silage).
+Standardizes crop names, combining crops with synonymous names in database and resolve spelling
+differences and formatting differences
 }
 \details{
-Standardization is performed using keyword matching with
-\code{grepl()} and \code{dplyr::case_when()}.
-
-
-Crop names are standardized using rule-based pattern matching.
 New standardization rules can be added by including additional
-\code{grepl()} conditions within the corresponding
-\code{dplyr::case_when()} statement.
+grepl() conditions within dplyr::case_when()
 }
